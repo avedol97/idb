@@ -1,22 +1,21 @@
 package com.idb.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity
 @Table(name="klient",schema = "wypozyczalnia")
 public class KlientEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name= "id_klienta", nullable = false)
+    @Column(name= "id_klienta")
     private Long id;
     @Column(name = "id_adres", nullable = false)
     private Long adres;
@@ -25,9 +24,10 @@ public class KlientEntity {
     @Column(nullable = false)
     private String nazwisko;
     @Column(name = "data_urodzenia", nullable = false)
-    private String dataUr;
+    private Date dataUr;
     @Column(nullable = false)
     private String pesel;
     @Column(nullable = false)
     private int telefon;
-}
+    }
+
