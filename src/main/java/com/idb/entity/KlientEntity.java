@@ -30,5 +30,14 @@ public class KlientEntity extends AbstractEntity implements  Cloneable {
     private String pesel;
     @Column(nullable = false)
     private int telefon;
+
+    public KlientEntity(Long adres, String imie, String nazwisko, Date dataUr, String pesel, int telefon) {
+        this.adres = adres;
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.dataUr = dataUr;
+        this.pesel = pesel;
+        this.telefon = telefon;
     }
+}
 
