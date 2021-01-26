@@ -1,6 +1,7 @@
 package com.idb.entity;
 
 import lombok.*;
+import org.dom4j.tree.AbstractEntity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,7 +13,7 @@ import java.util.Date;
 @Builder
 @Entity
 @Table(name="klient",schema = "wypozyczalnia")
-public class KlientEntity {
+public class KlientEntity extends AbstractEntity implements  Cloneable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name= "id_klienta")

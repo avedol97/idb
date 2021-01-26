@@ -17,21 +17,21 @@ public class KlientApi {
 
     @GetMapping("/all")
     public Iterable<KlientEntity> getAll() {
-        return klientService.findAll();
+        return klientService.findAl();
     }
 
-    @PostMapping
-    public KlientEntity addKlient(@RequestBody KlientDto klientDto) {
-        return klientService.save(KlientEntity
-                .builder()
-                .adres(klientDto.getAdres())
-                .imie(klientDto.getImie())
-                .nazwisko(klientDto.getNazwisko())
-                .dataUr(klientDto.getDataUr())
-                .pesel(klientDto.getPesel())
-                .telefon(klientDto.getTelefon())
-                .build());
-    }
+//    @PostMapping
+//    public KlientEntity addKlient(@RequestBody KlientDto klientDto) {
+//        return klientService.save(KlientEntity
+//                .builder()
+//                .adres(klientDto.getAdres())
+//                .imie(klientDto.getImie())
+//                .nazwisko(klientDto.getNazwisko())
+//                .dataUr(klientDto.getDataUr())
+//                .pesel(klientDto.getPesel())
+//                .telefon(klientDto.getTelefon())
+//                .build());
+//    }
 
     @PutMapping
     public KlientEntity updateKlient(@RequestBody KlientEntity klientEntity) {
