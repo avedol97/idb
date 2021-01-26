@@ -16,5 +16,7 @@ public class KlientServiceImpl {
     }
 
     public Iterable<KlientEntity> findAll(){return klientRepo.findAll();}
+    public KlientEntity save(KlientEntity klientEntity){return klientRepo.save(klientEntity);}
+    public void deleteById(Long id){klientRepo.deleteById(id);}
 
 }
